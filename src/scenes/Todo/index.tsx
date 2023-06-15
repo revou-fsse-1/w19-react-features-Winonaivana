@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Loader from "../../components/Loader";
+
 import Todo from "./Todo";
 import TodoForm from "../../components/AddForm";
 import { PlusCircleIcon } from "@heroicons/react/24/solid";
@@ -51,6 +51,7 @@ const Todos = () => {
       .then((res) => setTodos(res.slice(0, 10)))
       .catch((err) => setError(err));
   }, []);
+  error;
   const handleClose = () => {
     setIsShown(false);
   };
