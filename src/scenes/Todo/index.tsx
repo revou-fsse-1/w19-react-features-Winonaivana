@@ -221,7 +221,7 @@ const Todos = () => {
         <div className="pl-10 pt-6">
           <SearchBar onSearch={handleSearch}></SearchBar>
         </div>
-        <div className="pl-10 pt-10 text-3xl">Notes</div>
+        <div className="pl-10 pt-10 text-3xl">Todos</div>
         <div className=" flex w-screen justify-center ">
           <motion.div
             initial="hidden"
