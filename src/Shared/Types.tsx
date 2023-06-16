@@ -1,5 +1,5 @@
 export interface TodoType {
-  title: string;
-  id: number;
-  completed: boolean;
+  name: string;
+  id: string;
+  is_active: boolean;
 }
