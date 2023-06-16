@@ -205,7 +205,7 @@ const Todos = () => {
         </div>
       )}
 
-      <div className="min-h-full border-r-2 border-black p-6">
+      <div className="min-h-full border-r-2 border-gray-100 p-6">
         <p className="text-sm font-semibold">Twodo</p>
         <PlusCircleIcon
           className="mt-10 h-[50px]"
