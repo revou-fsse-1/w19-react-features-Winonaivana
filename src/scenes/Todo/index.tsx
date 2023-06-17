@@ -88,7 +88,7 @@ const Todos = () => {
 
   useEffect(() => {
     getCategories();
-  });
+  }, []);
 
   const handleClose = () => {
     setIsShown(false);
@@ -237,7 +237,7 @@ const Todos = () => {
             {todos.length > 0 && searchInput.length < 1 ? (
               todos.map((todo: Todo) => (
                 <Todo todo={todo}>
-                  <div className="flex justify-between gap-2">
+                  <div key={todo.id} className="flex justify-between gap-2">
                     <button onClick={() => showUpdate(todo.id)}>Edit</button>
                     <button onClick={() => handleDelete(todo.id)}>
                       Delete
@@ -254,7 +254,7 @@ const Todos = () => {
           <div className="mr-6 mt-8 grid grid-cols-1 gap-8 pb-4 pr-20 pt-4 md:grid md:grid-cols-4">
             {searchInput.length > 0 &&
               searchResult.map((todo: Todo) => (
-                <Todo todo={todo}>
+                <Todo todo={todo} key={todo.id}>
                   <div className="flex justify-between gap-2">
                     <button onClick={() => showUpdate(todo.id)}>Edit</button>
                     <button onClick={() => handleDelete(todo.id)}>
